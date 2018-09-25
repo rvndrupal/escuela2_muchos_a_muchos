@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Curso;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Alumno extends Model
@@ -10,7 +12,8 @@ class Alumno extends Model
         'nombre',
     ]; 
 
-    public function cursos(){ // se manda a llamar en el seeder de post en la relacion
-        return $this->belongsToMany(Curso::class);  //pertenece y tiene muchas etiquetas
+    public function cursos()
+    { 
+        return $this->belongsToMany(Curso::class);  
     }
 }

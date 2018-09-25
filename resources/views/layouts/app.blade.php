@@ -54,6 +54,10 @@
                         </li>
                         @endcan
 
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('front') }}">Front</a>
+                        </li>
+
                         @can('users.index')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
