@@ -13,12 +13,14 @@
                 </div>
 
                 <div class="panel-body">
-                   Alumno:  {{ $alumnos->nombre }}
-                   <hr>
+                 
 
-                   @foreach ($alumnos->cursos as  $curso )
+                   @foreach ($alumnos as  $alumno )
+
+                   Alumno:  {{ $alumno->nombre }}
+                   <hr>
                   
-                    Curso: {{ $curso->nombre }} --> {{ $curso->body }}<br>
+                     Curso: {{ $alumno->cursos['nombre'] }} --> {{ $alumno->cursos['body'] }}<br> 
 
                    @endforeach                 
                    

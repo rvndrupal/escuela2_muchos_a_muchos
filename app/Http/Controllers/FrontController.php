@@ -13,13 +13,15 @@ class FrontController extends Controller
     public function index()
     {
 
-        $alumnos=Alumno::findOrFail(11);
-        //$alumnos=Alumno::all();     
+        //$alumnos=Alumno::findOrFail(11);
+        //$alumnos=Alumno::all(); 
         
-        $alumnos->cursos;
+        $alumnos=Alumno::with('cursos')->get();
+        
+        //$alumnos->cursos;
      
 
-       //dd($alumnos);
+       dd($alumnos);
        
         
        return view('front.index',compact('alumnos'));
